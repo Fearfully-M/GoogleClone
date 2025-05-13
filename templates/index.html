@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Search{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <div class="topnav">
+        <a class="active" href="#home">Search</a>
+        <a href="#news">Advanced Search</a>
+        <a href="#contact">Image Search</a>
+      </div>
+</head>
+<body>
+    <header>
+        <h1>My Google Clone</h1>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>
