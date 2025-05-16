@@ -3,11 +3,20 @@
 {% block title %}Advanced Search{% endblock %}
 
 {% block content %}
+
+<div class = 'center-wrapper-advanced'>
+
+    <h3>Find pages with...</h3>
 <form action="https://www.google.com/search">
-    <input type="text" name="as_q" placeholder="All these words">
-    <input type="text" name="as_epq" placeholder="Exact phrase">
-    <input type="text" name="as_oq" placeholder="Any of these words">
-    <input type="text" name="as_eq" placeholder="None of these words">
-    <input type="submit" value="Advanced Search">
+
+    <div class = 'center-wrapper-advanced'>
+        <div>all these words:<input type="text" name="as_q" placeholder=""></div>
+        <div>this exact word or phrase:<input type="text" name="as_epq" placeholder=""></div>
+        <div>any of these words:<input type="text" name="as_oq" placeholder=""></div>
+        <div>none of these words:<input type="text" name="as_eq" placeholder=""></div>
+        <div><input type="submit" value="Advanced Search"></div>
 </form>
+
+
+</div>
 {% endblock %}

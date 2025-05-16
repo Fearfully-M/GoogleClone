@@ -3,11 +3,15 @@
 {% block title %}Advanced Search{% endblock %}
 
 {% block content %}
+
 <form action="https://www.google.com/search">
-    <input type="text" name="as_q" placeholder="All these words">
-    <input type="text" name="as_epq" placeholder="Exact phrase">
-    <input type="text" name="as_oq" placeholder="Any of these words">
-    <input type="text" name="as_eq" placeholder="None of these words">
-    <input type="submit" value="Advanced Search">
+
+    <div class = 'center-wrapper-advanced'>
+        <div><input type="text" name="as_q" placeholder=""></div>
+        <div><input type="text" name="as_epq" placeholder="Exact phrase"></div>
+        <div><input type="text" name="as_epq" placeholder="Exact phrase"><input type="text" name="as_oq" placeholder="Any of these words"></div>
+        <div><input type="text" name="as_eq" placeholder="None of these words"></div>
+        <div><input type="submit" value="Advanced Search"></div>
+    </div>
 </form>
 {% endblock %}

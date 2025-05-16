@@ -2,21 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}Search{% endblock %}</title>
+    <link rel="stylesheet" href="static/stylesheet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <title>{% block title %}{{ title }}{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <div class="topnav">
-        <a class="active" href="#home">Search</a>
-        <a href="#news">Advanced Search</a>
-        <a href="#contact">Image Search</a>
-      </div>
+    <nav class="topnav">
+        <a class="active" href="/">Search</a>
+        <a href="/advanced">Advanced Search</a>
+        <a href="/image">Image Search</a>
+      </nav>
 </head>
-<body>
-    <header>
-        <h1>My Google Clone</h1>
-    </header>
+
+<script>
+  const phrases = [
+    "I'm Feeling Curious",
+    "I'm Feeling Generous",
+    "I'm Feeling Artistic",
+    "I'm Feeling Adventurous",
+    "I'm Feeling Lucky"
+  ];
+
+  const button = document.getElementById('lucky-button');
+
+  button.addEventListener('mouseover', () => {
+    const randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
+    button.textContent = randomPhrase;
+  });
+
+  button.addEventListener('mouseout', () => {
+    button.textContent = "I'm Feeling Lucky";
+  });
+</script>
+
+
+    <div class ='center-wrapper'>
+        {% if show_title  %}
+            <h1 class = 'title'> {{ heading }}</h1>
+        {% endif %}
+    </div>
+    
     <main>
         {% block content %}
         {% endblock %}
     </main>
-</body>
+    </body>
+
 </html>

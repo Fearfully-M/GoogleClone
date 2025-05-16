@@ -3,8 +3,45 @@
 {% block title %}Simple Search{% endblock %}
 
 {% block content %}
-<form action="https://www.google.com/search">
-    <input type="text" name="q" placeholder="Search Google">
-    <input type="submit" value="Search">
+
+<div class ='search-wrapper'>
+<form class = 'form' action="https://www.google.com/search">
+    <input class = 'textbox' type="text" name="q" placeholder="">
+    <br>
+    <br>
+    <div class = 'center-button-container'>
+        <button class = 'submit-button search-button' type ='submit'>Google Clone Search</button>
+        <button class = 'submit-button lucky-button' type ='submit'> <div class = "wordEffect">I'm Feeling Lucky</div></button>
+    </div>
+
 </form>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const phrases = [
+        { text: "I'm Feeling Hungry", query: "best local food" },
+        { text: "I'm Feeling Curious", query: "interesting facts" },
+        { text: "I'm Feeling Adventurous", query: "travel destinations" },
+        { text: "I'm Feeling Lucky", query: "surprise me" }
+    ];
+
+    const button = document.querySelector(".wordEffect");
+
+    let selectedPhrase = {text: "I'm feeling Lucky", query: "surprise me"}; 
+
+    button.addEventListener('mouseover', () => {
+        selectedPhrase = phrases[Math.floor(Math.random() * phrases.length)];
+        button.textContent = selectedPhrase.text;
+    });
+
+    const fullButton = document.querySelector(".wordEffect");
+    fullButton.addEventListener("click", (e) => {
+      e.preventDefault(); // prevents form from submitting normally
+      const url = `https://www.google.com/search?q=${encodeURIComponent(selectedPhrase.query)}`;
+      window.location.href = url;
+    });
+  });
+</script>
+
 {% endblock %}
