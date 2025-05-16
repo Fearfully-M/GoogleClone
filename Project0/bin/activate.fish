@@ -33,7 +33,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV /home/fearfully_m/GoogleClone/Project0
+set -gx VIRTUAL_ENV /home/fearfully_m/Desktop/GoogleClone/Project0
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/"bin $PATH
