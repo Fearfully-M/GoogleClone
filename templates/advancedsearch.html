@@ -4,19 +4,42 @@
 
 {% block content %}
 
-<div class = 'center-wrapper-advanced'>
+<!-- <div class = 'center-wrapper-advanced'> -->
 
-    <h3>Find pages with...</h3>
+    <span><h3 style="color:white;">Find pages with...</h3> </span>
+    <span><h4 style="color:white;" class ='advanced-instructions'>To do this in the in the searchbox</h4></span>
 <form action="https://www.google.com/search">
 
     <div class = 'center-wrapper-advanced'>
-        <div>all these words:<input type="text" name="as_q" placeholder=""></div>
-        <div>this exact word or phrase:<input type="text" name="as_epq" placeholder=""></div>
-        <div>any of these words:<input type="text" name="as_oq" placeholder=""></div>
-        <div>none of these words:<input type="text" name="as_eq" placeholder=""></div>
-        <div><input type="submit" value="Advanced Search"></div>
+
+        <div class = 'form-row'>
+        <label for="input1">all these words:</label>
+            <input type="text" name="as_q" placeholder="">
+       </div>
+
+        <div class ='form-row'>
+            <label for="input2"> this exact word or phrase: </label>
+            <input type="text" name="as_epq" placeholder="">
+            <span>Test test</span>
+        </div>
+
+        <div class ='form-row'>
+            <label for="input3">any of these words:</label>
+            <input type="text" name="as_oq" placeholder="">
+        </div>
+
+        <div class ='form-row'>
+            <label for="input4">none of these words:</label>
+            <input type="text" name="as_eq" placeholder="">
+        </div>
+
+        <div class ='form-row'>
+            <input type="submit" value="Advanced Search">
+        </div>
+        
+        </div>
+    
 </form>
 
 
-</div>
 {% endblock %}

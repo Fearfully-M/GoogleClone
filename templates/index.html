@@ -36,12 +36,20 @@
     button.textContent = "I'm Feeling Lucky";
   });
 </script>
+  {% if show_title %}
+  {% if heading == 'Advanced Search' %}
 
+  <div class = 'advanced-search '>
+    <h1 class="title">{{ heading }}</h1>
+  </div>
+     
+  {% else %}
+      <div class="center-wrapper">
+          <h1>{{ heading }}</h1>
+      </div>
+  {% endif %}
+  {% endif %}
 
-    <div class ='center-wrapper'>
-        {% if show_title  %}
-            <h1 class = 'title'> {{ heading }}</h1>
-        {% endif %}
     </div>
     
     <main>
