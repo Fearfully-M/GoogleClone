@@ -1,17 +1,35 @@
 {% extends "index.html" %}
 
-{% block title %}Advanced Search{% endblock %}
+{% block title %}Image Search{% endblock %}
 
 {% block content %}
 
-<form action="https://www.google.com/search">
+<!-- Load Material Icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <div class = 'center-wrapper-advanced'>
-        <div><input type="text" name="as_q" placeholder=""></div>
-        <div><input type="text" name="as_epq" placeholder="Exact phrase"></div>
-        <div><input type="text" name="as_epq" placeholder="Exact phrase"><input type="text" name="as_oq" placeholder="Any of these words"></div>
-        <div><input type="text" name="as_eq" placeholder="None of these words"></div>
-        <div><input type="submit" value="Advanced Search"></div>
+<div class="search-wrapper">
+  <form class="form" action="https://www.google.com/search">
+    <div class="input-group">
+      <span class="input-icon">
+        <i class="material-icons">search</i>
+      </span>
+      
+      <input type="text" class="textbox" name="q" placeholder="">
     </div>
-</form>
+
+
+
+    <div class="center-button-image-container">
+      <button class="submit-button search-button" type="submit">Google Clone Image Search</button>
+    </div>
+  </form>
+</div>
+
+
+
+
 {% endblock %}
+
+
+
+
