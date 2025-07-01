@@ -4,11 +4,18 @@
 
 {% block content %}
 
-<div class ='search-wrapper'>
-<form class = 'form' action="https://www.google.com/search">
-    <input class = 'textbox' type="text" name="q" placeholder="">
-    <br>
-    <br>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+<div class="search-wrapper">
+  <form class="form" action="https://www.google.com/search">
+    <div class="input-group">
+      <span class="input-icon">
+        <i class="material-icons">search</i>
+      </span>
+      
+      <input type="text" class="textbox" name="q" placeholder="">
+    </div>
     <div class = 'center-button-container'>
         <button class = 'submit-button search-button' type ='submit'>Google Clone Search</button>
         <button class = 'submit-button lucky-button' type ='submit'> <div class = "wordEffect">I'm Feeling Lucky</div></button>

@@ -1,54 +1,58 @@
 {% extends "index.html" %}
 
-<div style="color: red;">
+<div class = 'advanced1'>
 {% block title %}Advanced Search{% endblock %}
 </div>
+
 {% block content %}
+ 
+<hr style="border: none; height: 2px; background-color: black;">
 
 <div class = 'center-wrapper-advanced'>
 
-    <span><h3 style="color:white;">Find pages with...</h3> </span>
-    <span><h4 style="color:white;" class ='advanced-instructions'>To do this in the in the searchbox</h4></span>
-<form action="https://www.google.com/search">
-
-    <div class = 'center-wrapper-advanced'>
-
-        <div class = 'form-row'>
-        <label for="input1">all these words:</label>
-            <input type="text" name="as_q" placeholder="">
-            <sub style = "color:#838895">Type the important words: <span style = "color: #c2b9a9"> tricolor rat terrier</sub></span>
-       </div>
-
-        <div class ='form-row'>
-            <label for="input2"> this exact word or phrase: </label>
-            <input type="text" name="as_epq" placeholder="">
-            <sub style ="color:#838895;">Put exact words in quotes: <span style = "color:#c2b9a9"> "rat terrier"</sub> </span>
-        </div>
-
-        <div class ='form-row'>
-            <label for="input3">any of these words:</label>
-            <input type="text" name="as_oq" placeholder="">
-            <sub style ="color: #838895">Type <span style = "color:#c2b9a9">OR</span> between all the words you want:  <span style = "color:#c2b9a9">miniature OR standard</span></sub>
-                </div>
-
-        <div class ='form-row'>
-            <label for="input4">none of these words:</label>
-            <input type="text" name="as_eq" placeholder="">
-            <sub style = color:#838895;></style> "Put a minus sign just before words you don't want: <span style = "color:#c2b9a9"> -rodent, -"Jack Russell"</span>
+    <div class="title-row">
+        <h3 style="color:white;">Find pages with...</h3>
+        <h4 class="advanced-instructions">To do this in the search box</h4>
+    </div>
 
 
-            </sub></span>
-        </div>
+<form action="https://www.google.com/search" method="GET">
 
-        <div class ='form-row'>
-            <input class = "submit-button" type="submit" value="Advanced Search">
-        </div>
-        </div>
+    
+
+    <div class = 'form-row'>
+    <label for="input1">all these words:</label>
+        <input type="text" name="as_q" placeholder="">
+        <sub class = 'advanced-subtext'>Type the important words: <span style = "color: rgb(218,220,224)"> tricolor rat terrier</sub></span>
+    </div>
+
+    <div class ='form-row'>
+        <label for="input2"> this exact word or phrase: </label>
+        <input type="text" name="as_epq" placeholder="">
+        <sub class = 'advanced-subtext'>Put exact words in quotes: <span style = "color: rgb(218,220,224)"> "rat terrier"</sub> </span>
+    </div>
+
+    <div class ='form-row'>
+        <label for="input3">any of these words:</label>
+        <input type="text" name="as_oq" placeholder="">
+        <sub class = 'advanced-subtext'>Type <span style = "color:#c2b9a9">OR</span> between all the words you want:  <span style = "color: rgb(218,220,224)">miniature OR standard</span></sub>
+            </div>
+
+    <div class ='form-row'>
+        <label for="input4">none of these words:</label>
+        <input type="text" name="as_eq" placeholder="">
+        <sub class = 'advanced-subtext'></style> "Put a minus sign just before words you don't want: <span style = "color: rgb(218,220,224)"> -rodent, -"Jack Russell"</span></sub>
+    </div>
+
+    <div class ='form-row-submit'>
+        <input class = "submit-button" type="submit" value="Advanced Search">
+    </div>
+    </div>
         
     
     
 </form>
-
+</div>
 </div>
 
 {% endblock %}

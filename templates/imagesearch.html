@@ -8,15 +8,16 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <div class="search-wrapper">
-  <form class="form" action="https://www.google.com/search">
+  <form class="form" action="https://www.google.com/search" method="GET">
     <div class="input-group">
       <span class="input-icon">
         <i class="material-icons">search</i>
       </span>
       
       <input type="text" class="textbox" name="q" placeholder="">
+      <input type="hidden" name="tbm" value="isch">
+      <!-- tbm = to be matched and isch is short for images -->
     </div>
-
 
 
     <div class="center-button-image-container">
@@ -26,10 +27,4 @@
 </div>
 
 
-
-
 {% endblock %}
-
-
-
-

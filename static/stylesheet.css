@@ -21,7 +21,8 @@
     padding-top: 10em;
 }
 
-.form-row{
+.form-row{ 
+    color: rgb(132,134,137);
     margin-bottom: 12px;
     display: flex;
     align-items: center;
@@ -29,7 +30,11 @@
 
 .form-row input{
     /* flex: 1; */
+    color: white;
     padding: 6px;
+    background-color: rgb(32,33,35);
+    border-color: rgb(92,95,93);
+    border-width: 2px;
 }
 
 .form-row label {
@@ -38,8 +43,17 @@
   /* font-weight: bold; */
 }
 
+.form-row-submit{
+    color: rgb(132,134,137);
+    margin-bottom: 12px;
+    display: flex;
+    transform: translateX(16.2em);
+}
+
 .advanced-instructions{
-    display: inline-flex
+    display: inline-flex;
+    justify-content: right;
+    align-items: right;
 }
 
 
@@ -56,7 +70,7 @@
 
 .search-wrapper{
     /* background-color: red; */
-    color: green;
+    /* color: green; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,8 +81,16 @@
     color: rgb(242, 139, 130);
 }
 
+.title-row{
+    display: flex;
+    align-items: baseline;
+    gap: 14.5em;
+}
+
 .advanced-search{
-    /* background-color: red; */
+    font-size: small;
+    font-family: Arial, Helvetica, sans-serif;
+    transform: translateX(2em);
 }
 
 .advancedsearch-wrapper{
@@ -78,6 +100,11 @@
     justify-content: center;
     align-items: center;
     /* padding-top: 1em; */
+}
+
+.advanced-subtext{
+    color:#838895;
+    transform:translateX(1em);
 }
 
 .textbox {
@@ -115,11 +142,13 @@
 }
 
 .submit-button{
-    color: #e8eaed;
-    background-color: #3f4454;
-    /* border: 1px solid #dcdcdc; */
+    color: rgb(32,33,36);
+    font-size: 0.2em;
+    font-weight: bold;
+    background-color: rgb(138,180,249);
+    padding: 0.8em 1.5em;
+    border: 1px solid #dcdcdc;
     cursor: pointer;
-    font-size: 1em;
     border-radius: 4px;
 }
 
@@ -157,7 +186,7 @@
 
 }
 body{
-    background-color: #101218;
+    background-color: rgb(32,33,36);
 }
 
 .input-group {
@@ -176,6 +205,12 @@ body{
   pointer-events: none; /* so clicks go to input */
 }
 
+
+.form-row input:focus{
+    color: white;
+    outline: 2px solid rgb(138,180,249);
+    caret-color: white;
+}
 .textbox {
     /* background-color: red; */
   padding: 2px 2px 2px 40px; /* LEFT padding increased from 36px to 40px */
